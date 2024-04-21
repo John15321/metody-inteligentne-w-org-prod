@@ -32,3 +32,17 @@ def pora_roku(miesiac: int) -> Optional[str]:
     return None # Out of range, but no bad input return spec given
 
 
+def depozyt_bankowy(a, b, lata):
+    for _ in range(lata):
+        a += a* (b / 100)
+    return a
+    
+
+def is_prime(liczba):
+    if liczba < 2 or liczba > 1000:
+        return False
+    for i in range(2, liczba):
+        if liczba % i == 0:
+            return False
+    return True
+
